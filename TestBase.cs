@@ -1,10 +1,16 @@
+// NUnit.Framework zapewnia atrybuty do definiowania testów i metod konfiguracji testów, 
+// czyli [OneTimeSetUp], [OneTimeTearDown] itp.
 using Microsoft.Playwright;
 using NUnit.Framework;
 
 namespace PolandApi.ApiTests;
 
+// TestBase  - abstrakcyjna klasa bazowa dla testów API, centralizująca setup i teardown
+// nie będzie bezpośrednio instancjonowana
 public abstract class TestBase
 {
+    // 2 pola protected - ważne, aby klasy dziedziczące miały do nich dostępale by nie były publiczne
+    // null ! - operator wyłączenia ostrzeżeń dot. null (te pola będą inicjalizowane w OneTimeSetup)
     protected IPlaywright Playwright = null!;
     protected IAPIRequestContext Api = null!;
 
