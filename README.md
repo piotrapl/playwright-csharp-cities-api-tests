@@ -1,4 +1,4 @@
-### Jakie jest przeznaczenie tego projektu ?
+## Jakie jest przeznaczenie tego projektu ?
 
 Definiuje i uruchamia zestaw automatycznych testów API dla serwisu local-gov-units.polandapi.com. Testy wykonują zapytania HTTP (GET/POST itd.) przez Playwright APIRequestContext i weryfikują odpowiedzi (statusy, payload, zachowanie endpointów).
 
