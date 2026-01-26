@@ -30,13 +30,11 @@ dotnet test PolandApi.ApiTests/PolandApi.ApiTests.csproj -v normal
 
 - Konfiguracja przez appsettings / zmienne środowiskowe (BaseURL, flagi TLS, timeouts)
 
-- Lepsze asercje kontraktu: walidacja OpenAPI/Swagger (jeśli dostępne) lub JSON Schema
+- Lepsze asercje kontraktu: np. walidacja JSON Schema
 
-- Raportowanie: TRX / HTML report, screen/log artifacts z odpowiedziami
+- Raportowanie: TRX / HTML report, fragmenty logu z odpowiedziami z usługi
 
 - Pokrycie negatywne: więcej testów błędów (404/400), walidacje, edge-case’y, testy bezpieczeństwa (np. nagłówki)
-
-- Stabilność: retry/backoff dla niestabilnych środowisk, kontrola równoległości
 
 ## Jak można rozszerzyć projekt?
 
