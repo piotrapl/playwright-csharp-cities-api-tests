@@ -20,6 +20,11 @@ public abstract class TestBase
 // mówi, że metoda ma być uruchomiona raz przed wszystkimi testami w klasie
 // async - tzn. że to metoda asynchroniczna
 //    więc pozwala na wykonywanie operacji, które mogą zająć trochę czasu (np. sieciowe)
+
+// CreateAsync() - metoda statyczna do tworzenia instancji Playwright asynchronicznie
+//      inicjalizacja pola Playwright które będzie używane do interakcji z API
+// APIRequestNewContextOptions - klasa do tworzenia kontekstu żądań API
+
     [OneTimeSetUp]
     public async Task OneTimeSetup()
     {
