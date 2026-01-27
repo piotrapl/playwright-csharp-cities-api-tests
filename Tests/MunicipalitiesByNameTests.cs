@@ -24,10 +24,10 @@ public class MunicipalitiesByNameTests : TestBase
     [TestCaseSource(nameof(PositiveNames))]
     public async Task Get_municipalities_by_name_should_return_success_true_and_data(string name)
     {
-        // przygotowanie
+        // Przygotowanie
         var url = $"/api/v1/municipalities/name/{Uri.EscapeDataString(name)}";
 
-        // działanie
+        // Wykonanie
         var response = await Api.GetAsync(url);
         var body = await response.TextAsync();
 
