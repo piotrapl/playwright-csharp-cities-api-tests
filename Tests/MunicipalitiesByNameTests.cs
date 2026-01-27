@@ -8,6 +8,9 @@ namespace PolandApi.ApiTests;
 
 // PositiveNames() - metoda zwracająca kolekcję nazw miast do testów pozytywnych
 // yield return - słowo kluczowe do zwracania pojedynczych elementów kole
+// IEnumerable<TestCaseData> - kolekcja danych testowych dla NUnit
+// [TestFixture] - atrybut NUnit
+// oznacza że ta klasa jest fiksturą testową NUnit czyli klasą zawierającą testy
 public class MunicipalitiesByNameTests : TestBase
 {
     public static IEnumerable<TestCaseData> PositiveNames()
