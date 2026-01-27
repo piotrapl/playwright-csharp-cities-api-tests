@@ -17,7 +17,7 @@ public abstract class TestBase
     private const string BaseUrl = "https://local-gov-units.polandapi.com";
 
 // [OneTimeSetUp] - atrybut NUnit (metadana)
-// wskazuje, że metoda ma być uruchomiona raz przed wszystkimi testami w klasie
+// mówi, że metoda ma być uruchomiona raz przed wszystkimi testami w klasie
 // async - tzn. że to metoda asynchroniczna
 //    więc pozwala na wykonywanie operacji, które mogą zająć trochę czasu (np. sieciowe)
     [OneTimeSetUp]
@@ -34,7 +34,7 @@ public abstract class TestBase
         );
     }
 // [OneTimeTearDown] - atrybut NUnit
-// wskazuje, że metoda ma być uruchomiona raz po wszystkich testach w klas
+// mówi, że metoda ma być uruchomiona raz po wszystkich testach w klas
 // Task to reprezentacja asynchronicznej operacji, która może zakończyć się sukcesem lub błędem
 // zawiera o tym informację (succces czy error) i pozwala na oczekiwanie na jej zakończenie
 
