@@ -29,7 +29,7 @@ public abstract class TestBase
             new APIRequestNewContextOptions
             {
                 BaseURL = BaseUrl,
-                IgnoreHTTPSErrors = true   // ✅ FIX: ignore expired / invalid TLS cert
+                IgnoreHTTPSErrors = true   // ignorujemy błędy certyfikatów SSL
             }
         );
     }
