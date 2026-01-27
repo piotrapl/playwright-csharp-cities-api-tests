@@ -2,8 +2,12 @@ using System.Text.Json;
 using Microsoft.Playwright;
 using NUnit.Framework;
 
+// System.Text.Json - przestrzeń z klasami do pracy z JSON
+
 namespace PolandApi.ApiTests;
 
+// PositiveNames() - metoda zwracająca kolekcję nazw miast do testów pozytywnych
+// yield return - słowo kluczowe do zwracania pojedynczych elementów kole
 public class MunicipalitiesByNameTests : TestBase
 {
     public static IEnumerable<TestCaseData> PositiveNames()
