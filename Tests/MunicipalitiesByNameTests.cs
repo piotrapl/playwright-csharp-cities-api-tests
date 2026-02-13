@@ -30,19 +30,19 @@ public class MunicipalitiesByNameTests : TestBase
     [TestCaseSource(nameof(PositiveNames))]
     public async Task Get_municipalities_by_name_should_return_success_true_and_data(string name)
     {
-        // Przygotowanie
+        // Przygotowanie:
         // {Uri.EscapeDataString(name)} - metoda do kodowania nazwy miasta w formacie URL, aby uniknąć problemów z niektórymi znakami
         // np. spacje zamienia na %20,
         //     polskie znaki diakrytyczne (np. ł, ś) też zakodowuje np. ł -> %C5%82, ś -> %C5%9B
 
         var url = $"/api/v1/municipalities/name/{Uri.EscapeDataString(name)}";
 
-        // Wykonanie: Api.GetAsync(url) - metoda do wysyłania żądania GET do określonego URL
+        // Wykonanie:   Api.GetAsync(url) - metoda do wysyłania żądania GET do określonego URL
         // response.TextAsync() - metoda do odczytania treści odpowiedzi w formie tekstowej
         var response = await Api.GetAsync(url);
         var body = await response.TextAsync();
 
-        // Weryfikacja czy status odpowiedzi HTTP jest OK (200)
+        // Weryfikacja czy status odpowiedzi HTTP jest OK(200)
         Assert.That(response.Ok, Is.True, $"HTTP failed. Status: {(int)response.Status} Body: {body}");
 
         // Weryfikacja czy odpowiedź JSON zawiera pole success ustawione na true oraz blok data
@@ -64,3 +64,9 @@ public class MunicipalitiesByNameTests : TestBase
         );
     }
 }
+
+// root.TryGetProperty - metoda do sprawdzania czy w obiekcie JSON istnieje określone pole (w tym przypadku "success" i "data") oraz do pobierania jego wartości
+// success.ValueKind == JsonValueKind.True 
+// - sprawdzenie czy wartość pola "success" jest typu boolean i ma wartość true
+// data.ValueKind != JsonValueKind.Null 
+// - sprawdzenie czy pole "data" istnieje i nie jest null (zawiera jakieś dane)
