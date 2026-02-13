@@ -4,9 +4,11 @@ using NUnit.Framework;
 
 namespace PolandApi.ApiTests;
 
+// using - dyrektywa do importowania przestrzeni nazw, umożliwiająca korzystanie z klas bez konieczności pełnego kwalifikowania ich nazw
 // System.Text.Json - przestrzeń z klasami do pracy z danymi w formacie JSON
 // Microsoft.Playwright - przestrzeń z klasami do automatyzacji przeglądarek
-// NUnit.Framework - przestrzeń z klasami do pisania testów jednostkowych w NUnit   
+// NUnit.Framework - przestrzeń z klasami do pisania testów jednostkowych w NUnit 
+
 // PolandApi.ApiTests - przestrzeń nazw dla testów API dotyczących polskich jednostek samorządu teryt.
 
 
