@@ -11,12 +11,11 @@ namespace PolandApi.ApiTests;
 
 // PolandApi.ApiTests - przestrzeń nazw dla testów API dotyczących polskich jednostek samorządu teryt.
 
-
 // PositiveNames() - metoda zwracająca kolekcję nazw miast do testów pozytywnych
-// yield return - słowo kluczowe do zwracania pojedynczych elementów kole
+// yield return - słowo kluczowe do zwracania pojedynczych elementów kolekcji w metodzie iteratora
 // IEnumerable<TestCaseData> - kolekcja danych testowych dla NUnit
 // [TestFixture] - atrybut NUnit
-// oznacza że ta klasa jest fiksturą testową NUnit czyli klasą zawierającą testy
+// oznacza że ta klasa jest fiksturą (fixture) testową NUnit czyli klasą zawierającą testy
 public class MunicipalitiesByNameTests : TestBase
 {
     public static IEnumerable<TestCaseData> PositiveNames()
