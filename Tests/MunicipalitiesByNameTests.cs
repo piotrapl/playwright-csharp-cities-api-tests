@@ -30,9 +30,11 @@ public class MunicipalitiesByNameTests : TestBase
     public async Task Get_municipalities_by_name_should_return_success_true_and_data(string name)
     {
         // Przygotowanie
+    
         var url = $"/api/v1/municipalities/name/{Uri.EscapeDataString(name)}";
 
         // Wykonanie: Api.GetAsync(url) - metoda do wysyłania żądania GET do określonego URL
+        // response.TextAsync() - metoda do odczytania treści odpowiedzi jako tekst   
         var response = await Api.GetAsync(url);
         var body = await response.TextAsync();
 
