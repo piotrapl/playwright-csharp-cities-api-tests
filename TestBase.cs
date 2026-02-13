@@ -54,5 +54,7 @@ public abstract class TestBase
 }
 
 // DisposeAsync() vs Dispose() 
-// - DisposeAsync() jest metodą asynchroniczną, pozwala uwolnić zasoby w sposób nieblokujący,
-//  co jest ważne przy operacjach sieciowych, czasem czasochłonnych
+// - DisposeAsync() jest metodą asynchroniczną, pozwala na uwolnienie zasobów w sposób nieblokujący, 
+//   to ważne przy operacjach sieciowych, czasem czasochłonnych
+
+// - Dispose() jest metodą synchroniczną, blokuje wątek do czasu uwolnienia zasobów,
