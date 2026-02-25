@@ -6,7 +6,7 @@ Definiuje i uruchamia zestaw automatycznych testów API dla serwisu local-gov-un
 
 *This project defines and runs an automated API test suite for local-gov-units.polandapi.com. It sends HTTP requests using Playwright’s APIRequestContext and asserts responses*
 
-## Wymagania (prerequisites)
+## Wymagania (_prerequisites_)
 
 .NET SDK 8.0
 
@@ -16,7 +16,7 @@ Zainstalowane zależności NuGet (restore wykona się automatycznie przy dotnet 
 
 Uwaga: jeśli środowisko testowe ma wygasły / nieprawidłowy certyfikat TLS, w projekcie może być użyte IgnoreHTTPSErrors = true w konfiguracji kontekstu API (jak w TestBase.cs).
 
-## Jak uruchomić testy ? (how to run tests ?)
+## Jak uruchomić testy ? (_how to run tests ?_)
 
 Z katalogu repozytorium (lub folderu z solution/projektem):
 
